@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/home/sebastiaosilva/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/home/sebastiaosilva/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.11.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/home/sebastiaosilva/.nuget/packages/" />
+  </ItemGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)shorthand.imagesharp.webp/2.2.1/contentFiles/any/netstandard2.0/native/win-x64/libwebp.dll" Condition="Exists('$(NuGetPackageRoot)shorthand.imagesharp.webp/2.2.1/contentFiles/any/netstandard2.0/native/win-x64/libwebp.dll')">
+      <NuGetPackageId>Shorthand.ImageSharp.WebP</NuGetPackageId>
+      <NuGetPackageVersion>2.2.1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>native/win-x64/libwebp.dll</TargetPath>
+      <DestinationSubDirectory>native/win-x64/</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>native/win-x64/libwebp.dll</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)shorthand.imagesharp.webp/2.2.1/contentFiles/any/netstandard2.0/native/win-x86/libwebp.dll" Condition="Exists('$(NuGetPackageRoot)shorthand.imagesharp.webp/2.2.1/contentFiles/any/netstandard2.0/native/win-x86/libwebp.dll')">
+      <NuGetPackageId>Shorthand.ImageSharp.WebP</NuGetPackageId>
+      <NuGetPackageVersion>2.2.1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>native/win-x86/libwebp.dll</TargetPath>
+      <DestinationSubDirectory>native/win-x86/</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>native/win-x86/libwebp.dll</Link>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/home/sebastiaosilva/.nuget/packages/microsoft.codeanalysis.analyzers/3.0.0</PkgMicrosoft_CodeAnalysis_Analyzers>
+  </PropertyGroup>
+</Project>
