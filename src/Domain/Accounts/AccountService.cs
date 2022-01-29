@@ -11,17 +11,17 @@ namespace Agencia.Bancaria.Plataforma.Domain.Accounts
         /// <summary>Repositório para armazenamento das contas.</summary>
         private readonly IAccountRepository _accountRep;
         
-        /// <summary>Repositório para armazenamento dos clientes.</summary>
-        private readonly IClientRepository _clientRep;
+        /// <summary>Serviço que provê acesso aos dados e operaçãoes dos clientes.</summary>
+        private readonly ClientService _clientService;
         
 
         /// <summary> Construtor com injeção de dependência.</summary>
         /// <param name="accountRep">Repositório para armazenamento das contas.</param>
-        /// <param name="clientRep">Repositório para armazenamento dos clientes.</param>
-        public AccountService(IAccountRepository accountRep, IClientRepository clientRep)
+        /// <param name="clientRep">Serviço que provê acesso aos dados e operaçãoes dos clientes.</param>
+        public AccountService(IAccountRepository accountRep, ClientService clientService)
         {
            _accountRep = accountRep;
-           _clientRep = clientRep;
+           _clientService = clientService;
         }
         
         /// <summary>Recuperar no repositório todas as contas cadastradas no sistema.</summary>

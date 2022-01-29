@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastruture/Repositories/MongoDb/MongoDb.csproj": {}
+    "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {}
   },
   "projects": {
-    "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+    "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+        "projectUniqueName": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj",
         "projectName": "Agencia.Bancaria.Plataforma.Domain",
-        "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj",
-        "packagesPath": "/home/sebastiaosilva/.nuget/packages/",
-        "outputPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/",
+        "projectPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj",
+        "packagesPath": "/home/relier/.nuget/packages/",
+        "outputPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/sebastiaosilva/.nuget/NuGet/NuGet.Config"
+          "/home/relier/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,17 +65,20 @@
         }
       }
     },
-    "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastruture/Repositories/MongoDb/MongoDb.csproj": {
+    "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastruture/Repositories/MongoDb/MongoDb.csproj",
-        "projectName": "Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb",
-        "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastruture/Repositories/MongoDb/MongoDb.csproj",
-        "packagesPath": "/home/sebastiaosilva/.nuget/packages/",
-        "outputPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastruture/Repositories/MongoDb/obj/",
+        "projectUniqueName": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
+        "projectName": "MongoDb",
+        "projectPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
+        "packagesPath": "/home/relier/.nuget/packages/",
+        "outputPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/sebastiaosilva/.nuget/NuGet/NuGet.Config"
+          "/home/relier/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -84,8 +90,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
-                "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj"
+              "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj": {
+                "projectPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj"
               }
             }
           }
@@ -103,18 +109,6 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.12.1, )"
-            },
-            "Shorthand.ImageSharp.WebP": {
-              "target": "Package",
-              "version": "[2.2.1, )"
-            },
-            "SixLabors.ImageSharp": {
-              "target": "Package",
-              "version": "[1.0.3, )"
-            },
-            "SixLabors.ImageSharp.Drawing": {
-              "target": "Package",
-              "version": "[1.0.0-beta11, )"
             }
           },
           "imports": [
