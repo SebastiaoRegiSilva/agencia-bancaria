@@ -1,4 +1,4 @@
-namespace Agencia.Bancaria.Plataforma.Domain.Accounts
+namespace Agencia.Plataforma.Domain.Accounts
 {
     /// <summary>Possíveis situações da conta do cliente.</summary>    
     public enum AccountStatus

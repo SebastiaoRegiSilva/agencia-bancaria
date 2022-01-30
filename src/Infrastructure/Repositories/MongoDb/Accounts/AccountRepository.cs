@@ -1,11 +1,11 @@
-using Agencia.Bancaria.Plataforma.Domain.Accounts;
-using Agencia.Bancaria.Plataforma.Domain.Clients;
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models;
+using Agencia.Plataforma.Domain.Accounts;
+using Agencia.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models;
 using MongoDB.Driver;
 using System;
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
 {
     /// <summary>Implementação do repositório de contas para o Mongo DB.</summary>
     public class AccountRepository : IAccountRepository

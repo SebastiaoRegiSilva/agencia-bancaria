@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>Agencia.Bancaria.Plataforma.Domain</AssemblyName>
+    <AssemblyName>Agencia.Plataforma.Domain</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

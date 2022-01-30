@@ -1,17 +1,16 @@
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Domain.Clients
+namespace Agencia.Plataforma.Domain.Clients
 {
     /// <summary>Interface que padroniza o repositório dos clientes.</summary>
     public interface IClientRepository
     {
         /// <summary>Cadastra na base de dados um novo cliente no sistema.</summary>
-        /// <param name="id">Código de identificação do cliente.</param>
         /// <param name="nome">Nome do cliente.</param>
         /// <param name="email">Email do cliente para contato.</param>
         /// <param name="tipoDeCliente">Tipo de cliente.</param>
         /// <returns>Código de identificação gerado para o cliente cadastrado.</returns>
-        Task<string> CadastrarClienteAsync(string id ,string nome, string email, ClientType tipoDeCliente);
+        Task<string> CadastrarClienteAsync(string nome, string email, ClientType tipoDeCliente);
         
         /// <summary>Recupera na base de dados um cliente com base em seu código de identificação.</summary>
         /// <param name="id">Código de identificação do cliente a ser recuperado.</param>

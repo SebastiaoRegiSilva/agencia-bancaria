@@ -1,8 +1,8 @@
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Clients;
 using System;
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Domain.Accounts
+namespace Agencia.Plataforma.Domain.Accounts
 {
     /// <summary>Interface que padroniza o repositório das contas.</summary>
     public interface IAccountRepository

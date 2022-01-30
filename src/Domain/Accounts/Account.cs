@@ -1,7 +1,7 @@
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Clients;
 using System;
 
-namespace Agencia.Bancaria.Plataforma.Domain.Accounts
+namespace Agencia.Plataforma.Domain.Accounts
 {
 
     /// <summary>Entidade que representa uma conta na agência bancária.</summary>

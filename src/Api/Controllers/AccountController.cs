@@ -1,10 +1,10 @@
-using Agencia.Bancaria.Plataforma.Domain.Accounts;
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Accounts;
+using Agencia.Plataforma.Domain.Clients;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Api.Controllers
+namespace Agencia.Plataforma.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Domain.Clients
+namespace Agencia.Plataforma.Domain.Clients
 {
     /// <summary>Serviço que provê acesso aos dados clientes.</summary>
     public class ClientService
@@ -16,19 +16,20 @@ namespace Agencia.Bancaria.Plataforma.Domain.Clients
         }
 
         /// <summary>Cadastra no repositório um novo cliente no sistema.</summary>
-        /// <param name="id">Código de identificação do cliente.</param>
         /// <param name="nome">Nome do cliente.</param>
         /// <param name="email">Email do cliente para contato.</param>
         /// <param name="tipoDeCliente">Tipo de cliente.</param>
         /// <returns>Código de identificação gerado para o cliente cadastrado.</returns>
-        public async Task CadastrarClienteAsync(string id ,string nome, string email, ClientType tipoDeCliente)
+        public async Task <string> CadastrarClienteAsync(string nome, string email, ClientType tipoDeCliente)
         {
-            var idCliente =  await _clientRep.CadastrarClienteAsync(id, nome, email, tipoDeCliente);
+            string idCliente =  await _clientRep.CadastrarClienteAsync(nome, email, tipoDeCliente);
+
+            return idCliente;
         }
 
-        /// <summary>Recuperar no repositório um cliente com base no seu número de conta.</summary>
+        /// <summary>Recuperar no repositório um cliente com base no seu código de identificação.</summary>
         /// <param name="id">Código de identificação do cliente que se deseja recuperar.</param>
-        /// <returns>Cliente recuperada com base no número.</returns>
+        /// <returns>Cliente recuperado.</returns>
         public async Task<Client> BuscarClientePorIdAsync(string id)
         {
             return await _clientRep.RecuperarClientePorIdAsync(id);

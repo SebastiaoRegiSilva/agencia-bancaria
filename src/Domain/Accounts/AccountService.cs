@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Clients;
 
-namespace Agencia.Bancaria.Plataforma.Domain.Accounts
+namespace Agencia.Plataforma.Domain.Accounts
 {
     /// <summary>Serviço que provê aos dados das contas dos clientes.</summary>
     public class AccountService

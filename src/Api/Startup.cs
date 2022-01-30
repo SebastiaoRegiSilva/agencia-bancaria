@@ -1,7 +1,7 @@
-using Agencia.Bancaria.Plataforma.Domain.Accounts;
-using Agencia.Bancaria.Plataforma.Domain.Clients;
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts;
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients;
+using Agencia.Plataforma.Domain.Accounts;
+using Agencia.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
-namespace Agencia.Bancaria.Plataforma
+namespace Agencia.Plataforma
 {
     public class Startup
     {

@@ -1,4 +1,4 @@
-namespace Agencia.Bancaria.Plataforma.Domain.Clients
+namespace Agencia.Plataforma.Domain.Clients
 {
     /// <summary>Possíveis tipos de cliente.</summary>
     public enum ClientType

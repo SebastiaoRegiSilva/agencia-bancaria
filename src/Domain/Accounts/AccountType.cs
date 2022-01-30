@@ -1,4 +1,4 @@
-namespace Agencia.Bancaria.Plataforma.Domain.Accounts
+namespace Agencia.Plataforma.Domain.Accounts
 {
     /// <summary>Possíveis tipos de conta para o cliente.</summary>
     public enum AccountType

@@ -1,10 +1,10 @@
-using Agencia.Bancaria.Plataforma.Domain.Accounts;
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Accounts;
+using Agencia.Plataforma.Domain.Clients;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models
 {
 
     /// <summary>Modelo que representa uma conta na base de dados.</summary>

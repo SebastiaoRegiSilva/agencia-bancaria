@@ -1,7 +1,7 @@
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
 using MongoDB.Driver;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients
 {
     /// <summary>Contexto utilizado para acesso aos dados dos clientes.</summary>
     class ClientContext

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Agencia.Bancaria.Plataforma.Api
+namespace Agencia.Plataforma.Api
 {
     public class Program
     {

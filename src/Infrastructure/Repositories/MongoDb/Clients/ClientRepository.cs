@@ -1,9 +1,9 @@
-using Agencia.Bancaria.Plataforma.Domain.Clients;
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
+using Agencia.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
 using MongoDB.Driver;
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients
 {
     /// <summary>Implementação do repositório de clientes para o Mongo DB.</summary>
     public class ClientRepository : IClientRepository
@@ -20,16 +20,14 @@ namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Client
         }
 
         /// <summary>Cadastra na base de dados um novo cliente no sistema.</summary>
-        /// <param name="id">Código de identificação do cliente.</param>
         /// <param name="nome">Nome do cliente.</param>
         /// <param name="email">Email do cliente para contato.</param>
         /// <param name="tipoDeCliente">Tipo de cliente.</param>
         /// <returns>Código de identificação gerado para o cliente cadastrado.</returns>
-        public async Task<string> CadastrarClienteAsync(string id ,string nome, string email, ClientType tipoDeCliente)
+        public async Task<string> CadastrarClienteAsync(string nome, string email, ClientType tipoDeCliente)
         {
             var model = new ClientModel
             {
-                Id = id,
                 Nome = nome,
                 Email = email,
                 TipoDeCliente = tipoDeCliente

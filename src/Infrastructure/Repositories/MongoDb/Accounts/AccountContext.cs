@@ -1,7 +1,7 @@
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models;
 using MongoDB.Driver;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
 {
     /// <summary>Contexto utilizado para acesso aos dados das contas.</summary>
     class AccountContext

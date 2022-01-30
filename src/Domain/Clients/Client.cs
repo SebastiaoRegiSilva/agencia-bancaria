@@ -1,4 +1,4 @@
-namespace Agencia.Bancaria.Plataforma.Domain.Clients
+namespace Agencia.Plataforma.Domain.Clients
 {
 
     /// <summary>Entidade que representa um cliente agência bancária.</summary>

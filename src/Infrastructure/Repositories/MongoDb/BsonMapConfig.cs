@@ -1,8 +1,8 @@
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models;
-using Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts.Models;
+using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
 using MongoDB.Bson.Serialization;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb
 {
     /// <summary>Classe de configuração responsável pelo mapeamento geral dos modelos na base de dados.</summary>
     public static class BsonMapConfig

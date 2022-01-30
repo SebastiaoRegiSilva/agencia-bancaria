@@ -1,8 +1,8 @@
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Clients;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Agencia.Bancaria.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models
+namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models
 {
     /// <summary>Modelo que representa um cliente na base de dados.</summary>
     public class ClientModel

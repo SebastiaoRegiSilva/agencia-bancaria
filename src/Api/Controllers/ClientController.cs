@@ -1,8 +1,8 @@
-using Agencia.Bancaria.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Clients;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Agencia.Bancaria.Plataforma.Api.Controllers
+namespace Agencia.Plataforma.Api.Controllers
 {
     /// <summary>Controller que provê endpoints relacionados a entidade de cliente.</summary>
     [Route("api/[controller]")]
@@ -32,9 +32,9 @@ namespace Agencia.Bancaria.Plataforma.Api.Controllers
 
         /// <summary></summary>
         [HttpPost]
-        public async Task<IActionResult> CadastrarCliente(string id, string nome, string email, ClientType tipoDeCliente)
+        public async Task<IActionResult> CadastrarCliente(string nome, string email, ClientType tipoDeCliente)
         {
-            await _clientService.CadastrarClienteAsync(id, nome, email, tipoDeCliente);         
+            await _clientService.CadastrarClienteAsync(nome, email, tipoDeCliente);         
             return Ok();
         }
 
