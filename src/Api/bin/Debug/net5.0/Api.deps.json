@@ -33,7 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Api/1.0.0": {
         "dependencies": {
-          "Agencia.Bancaria.Plataforma.Domain": "1.0.0",
+          "Agencia.Plataforma.Domain": "1.0.0",
           "MongoDB.Driver": "2.14.1",
           "MongoDb": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -725,20 +725,20 @@
         }
       },
       "System.Threading.Tasks.Extensions/4.5.3": {},
-      "Agencia.Bancaria.Plataforma.Domain/1.0.0": {
+      "Agencia.Plataforma.Domain/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.0"
         },
         "runtime": {
-          "Agencia.Bancaria.Plataforma.Domain.dll": {}
+          "Agencia.Plataforma.Domain.dll": {}
         },
         "compile": {
-          "Agencia.Bancaria.Plataforma.Domain.dll": {}
+          "Agencia.Plataforma.Domain.dll": {}
         }
       },
       "MongoDb/1.0.0": {
         "dependencies": {
-          "Agencia.Bancaria.Plataforma.Domain": "1.0.0",
+          "Agencia.Plataforma.Domain": "1.0.0",
           "MongoDB.Driver": "2.14.1"
         },
         "runtime": {
@@ -2650,7 +2650,7 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "Agencia.Bancaria.Plataforma.Domain/1.0.0": {
+    "Agencia.Plataforma.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

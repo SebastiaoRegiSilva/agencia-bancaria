@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XSh1qorToMDBgQYzgILjgALHeYPDi02k/OAq2pZXyLWSsPC9h8TD1vMdQlrqYwoohjXWYt4VXbCNjDDmANwg5w==",
+  "dgSpecHash": "6a7FZ4OeGmSB/RmIBQQv8ru/P5H8ksE+ThJSPrpsnmK7ScnDzFQ8QS9X9pGiUJ3AAT3yTdABlCmzFX+ddWNGLg==",
   "success": true,
-  "projectFilePath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/test/DomainTests/DomainTests.csproj",
+  "projectFilePath": "/home/relier/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj",
   "expectedPackageFiles": [
     "/home/relier/.nuget/packages/coverlet.collector/3.0.2/coverlet.collector.3.0.2.nupkg.sha512",
     "/home/relier/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",

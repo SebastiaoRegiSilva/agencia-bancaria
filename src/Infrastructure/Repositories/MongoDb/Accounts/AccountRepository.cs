@@ -68,6 +68,21 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
                 .FirstOrDefaultAsync();
         }
 
+        /// <summary>Recupera na base de dados uma conta com base em seu número.</summary>
+        /// <param name="id">Código de identificação da conta.</param>
+        /// <returns>Objeto de valor contendo as informações da conta recuperada.</returns>
+        public async Task<Account> RecuperarContaPorIdAsync(string id)
+        {
+            var builder = Builders<AccountModel>.Filter;
+            var filter = builder.Eq(a => a.Id, id);
+            
+            return await _ctxAccount.Contas
+                .Aggregate()
+                .Match(filter)
+                .FirstOrDefaultAsync();
+        }
+
+
         /// <summary>Edita na base de dados uma conta cadastrada no sistema.</summary>
         // <param name="id">Código de identificação da conta.</param>
         /// <param name="numeroConta">Número da conta do cliente.</param>

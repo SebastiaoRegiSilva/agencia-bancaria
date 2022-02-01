@@ -11,13 +11,15 @@ namespace Agencia.Plataforma.Api.Controllers
     public class AccountController : ControllerBase
     {
         private readonly AccountService _accountService;
+        private readonly ClientService _clientService;
 
-        public AccountController(AccountService accountService)
+        public AccountController(AccountService accountService, ClientService clientService)
         {
             _accountService = accountService;
+            _clientService = clientService;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{numeroConta}")]
         public async Task<ActionResult<Account>> BuscarContaPorNumero(int numeroConta)
         {
             var account = await _accountService.BuscarContaPorNumeroAsync(numeroConta);
@@ -28,14 +30,26 @@ namespace Agencia.Plataforma.Api.Controllers
             return Ok(account);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CadastrarNovaConta(string id, int numeroConta, Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Account>> BuscarContaPorId(string id)
         {
+            var account = await _accountService.BuscarContaPorIdAsync(id);
+            if (account == null)
+            {
+                return NotFound();
+            }
+            return Ok(account);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CadastrarNovaConta(string id, int numeroConta, string idCliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
+        {
+
             dataCadastro = DateTime.Now;
             dataAlteracao = DateTime.Now;
             saldo = 0;
 
-            await _accountService.CadastrarContaAsync(id, numeroConta, cliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            await _accountService.CadastrarContaAsync(id, numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
             return Ok();
         }
 

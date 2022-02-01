@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj": {}
+    "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj": {
+    "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj",
-        "projectName": "Agencia.Bancaria.Plataforma.Domain",
-        "projectPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj",
+        "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+        "projectName": "Agencia.Plataforma.Domain",
+        "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
         "packagesPath": "/home/relier/.nuget/packages/",
-        "outputPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/obj/",
+        "outputPath": "/home/relier/projetos/agencia-bancaria/src/Domain/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"

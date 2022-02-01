@@ -387,17 +387,17 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Agencia.Bancaria.Plataforma.Domain/1.0.0": {
+      "Agencia.Plataforma.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Agencia.Bancaria.Plataforma.Domain.dll": {}
+          "bin/placeholder/Agencia.Plataforma.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Agencia.Bancaria.Plataforma.Domain.dll": {}
+          "bin/placeholder/Agencia.Plataforma.Domain.dll": {}
         }
       }
     }
@@ -1052,7 +1052,7 @@
         "version.txt"
       ]
     },
-    "Agencia.Bancaria.Plataforma.Domain/1.0.0": {
+    "Agencia.Plataforma.Domain/1.0.0": {
       "type": "project",
       "path": "../../../Domain/Domain.csproj",
       "msbuildProject": "../../../Domain/Domain.csproj"
@@ -1060,7 +1060,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Agencia.Bancaria.Plataforma.Domain >= 1.0.0",
+      "Agencia.Plataforma.Domain >= 1.0.0",
       "MongoDB.Driver >= 2.12.1"
     ]
   },
@@ -1071,11 +1071,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
+      "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
       "projectName": "MongoDb",
-      "projectPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
+      "projectPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
       "packagesPath": "/home/relier/.nuget/packages/",
-      "outputPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/obj/",
+      "outputPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -1093,8 +1093,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj": {
-              "projectPath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/Domain.csproj"
+            "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+              "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj"
             }
           }
         }

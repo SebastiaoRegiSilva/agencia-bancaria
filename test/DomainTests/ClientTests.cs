@@ -35,7 +35,7 @@ namespace Agencia.DomainTests
 
             var config = builder.Build();
 
-            string conString = config.GetValue<string>("MongoDB:ConnectionString");
+            string conString = config.GetValue<string>("MongoDB:ConString");
             string database = config.GetValue<string>("MongoDB:Database");
 
             var clientRepository = new ClientRepository(conString, database);

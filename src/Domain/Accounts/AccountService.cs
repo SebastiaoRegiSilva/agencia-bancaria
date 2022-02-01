@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Agencia.Plataforma.Domain.Clients;
+using System;
+using System.Threading.Tasks;
 
 namespace Agencia.Plataforma.Domain.Accounts
 {
@@ -24,18 +23,26 @@ namespace Agencia.Plataforma.Domain.Accounts
            _clientService = clientService;
         }
         
-        /// <summary>Recuperar no repositório todas as contas cadastradas no sistema.</summary>
+        /// <summary>Recuperar no repositório a conta com base em seu número.</summary>
         /// <param name="numeroConta">Número da conta que se deseja recuperar.</param>
         /// <returns>Conta recuperada com base no número.</returns>
         public async Task<Account> BuscarContaPorNumeroAsync(int numeroConta)
         {
             return await _accountRep.RecuperarContaPorNumeroAsync(numeroConta);
         }
-        
+
+        /// <summary>Recuperar no repositório recuperar a conta com base em seu id.</summary>
+        /// <param name="id">Código de identificação da conta.</param>
+        /// <returns>Conta recuperada com base no código de identificação.</returns>
+        public async Task<Account> BuscarContaPorIdAsync(string id)
+        {
+            return await _accountRep.RecuperarContaPorIdAsync(id);
+        }            
+
         /// <summary>Cadastra no repositório uma nova conta no sistema.</summary>
         /// <param name="id">Código de identificação da conta.</param>
         /// <param name="numeroConta">Número da conta do cliente.</param>
-        /// <param name="cliente">Proprietário da conta.</param>
+        /// <param name="idcliente">Código de ideintificação.</param>
         /// <param name="tipoDaConta">Tipo da conta.</param>
         /// <param name="dataCadastro">Data em que o cliente foi cadastrado no sistema.</param>
         /// <param name="dataUltimoAcesso">Data em que o cliente fez o último acesso no sistema.</param>
@@ -43,10 +50,12 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <param name="saldo">Quantidade de saldo em conta.</param>
         /// <param name="statusDaConta">Situação da conta do cliente.</param>
         /// <returns>Código de identificação gerado para a conta cadastrada.</returns>
-        public async Task CadastrarContaAsync(string id, int numeroConta, Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
+        public async Task CadastrarContaAsync(string id, int numeroConta, string idCliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
         DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
         {
-            await _accountRep.CadastrarContaAsync(id, numeroConta, cliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            var clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
+            
+            await _accountRep.CadastrarContaAsync(id, numeroConta, clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
 
         }
         

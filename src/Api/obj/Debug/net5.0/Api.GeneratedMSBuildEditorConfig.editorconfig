@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Api
-build_property.ProjectDir = /media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Api/
+build_property.ProjectDir = /home/relier/projetos/agencia-bancaria/src/Api/

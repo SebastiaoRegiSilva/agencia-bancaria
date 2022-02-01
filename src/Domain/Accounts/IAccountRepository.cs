@@ -26,6 +26,11 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <returns>Objeto de valor contendo as informações da conta recuperada.</returns>
         Task<Account> RecuperarContaPorNumeroAsync(int numeroConta);
 
+        /// <summary>Recupera na base de dados uma conta com base em seu número.</summary>
+        /// <param name="id"> Código de identificação da conta.</param>
+        /// <returns>Objeto de valor contendo as informações da conta recuperada.</returns>
+        Task<Account> RecuperarContaPorIdAsync(string id);
+
         /// <summary>Edita na base de dados uma conta cadastrada no sistema.</summary>
         /// <param name="id">Código de identificação da conta.</param>
         /// <param name="numeroConta">Número da conta do cliente.</param>

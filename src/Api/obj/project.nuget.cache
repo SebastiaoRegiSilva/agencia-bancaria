@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q7euyc7QZdTN/dwKC9x4+KmB81Ir13DXiBdDb7Z1qtGj6abnTUU8O9bvY0oZPKYQS4gwSfK2DZWUDiN5oJgFDw==",
+  "dgSpecHash": "09IIlGWRpQZEI7SADrnqNALkFblBrxYzUz+Z2i3OBUc4gLoN07AdKCaqGI0YuGVftFnzpty7Igl7J5aoB1oCgw==",
   "success": true,
-  "projectFilePath": "/media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Api/Api.csproj",
+  "projectFilePath": "/home/relier/projetos/agencia-bancaria/src/Api/Api.csproj",
   "expectedPackageFiles": [
     "/home/relier/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
     "/home/relier/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/5.0.0/microsoft.aspnetcore.mvc.razor.extensions.5.0.0.nupkg.sha512",
