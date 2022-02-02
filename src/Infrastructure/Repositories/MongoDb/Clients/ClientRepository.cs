@@ -1,6 +1,7 @@
 using Agencia.Plataforma.Domain.Clients;
 using Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models;
 using MongoDB.Driver;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients
@@ -46,6 +47,31 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients
         {
             var builder = Builders<ClientModel>.Filter;
             var filter = builder.Eq(c => c.Id, id);
+            
+            return await _ctxClient.Clientes
+                .Aggregate()
+                .Match(filter)
+                .FirstOrDefaultAsync();
+        }
+
+        /// <summary>Recupera na base de dados todos os clientes cadastrados.</summary>
+        /// <returns>Todos os cliente cadastrados.</returns>
+        public async Task<List<Client>> RecuperarTodosAsync()
+        {
+            var builder = Builders<ClientModel>.Filter;
+
+            return await _ctxClient.Clientes
+                        .Find(s=>true)
+                        .ToListAsync();        
+        }
+
+        /// <summary>Recupera na base de dados um cliente com base em seu código de identificação.</summary>
+        /// <param name="nome">Nome do cliente a ser recuperado.</param>
+        /// <returns>Objeto de valor contendo as informações do cliente recuperado.</returns>
+        public async Task<Client> RecuperarClientePorNomeAsync(string nome)
+        {
+            var builder = Builders<ClientModel>.Filter;
+            var filter = builder.Eq(c => c.Nome, nome);
             
             return await _ctxClient.Clientes
                 .Aggregate()

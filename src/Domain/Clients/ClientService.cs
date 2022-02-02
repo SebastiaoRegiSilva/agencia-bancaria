@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Agencia.Plataforma.Domain.Clients
@@ -36,6 +37,24 @@ namespace Agencia.Plataforma.Domain.Clients
             
         }
         
+        /// <summary>Recuperar no repositório um cliente com base no seu código de identificação.</summary>
+        /// <param name="nome">Nome do cliente que se deseja recuperar.</param>
+        /// <returns>Cliente recuperado.</returns>
+        public async Task<Client> BuscarClientePorNomeAsync(string nome)
+        {
+            return await _clientRep.RecuperarClientePorNomeAsync(nome);
+            
+        }
+
+        /// <summary>Recuperar no repositório os clientes cadastrados.</summary>
+        /// <returns>Todos os clientes cadastrados.</returns>
+        public async Task<List<Client>> BuscarTodosAsync()
+        {
+            return await _clientRep.RecuperarTodosAsync();
+            
+        }
+
+
         /// <summary>Edita no repositório um cliente.</summary>
         /// <param name="id">Código de identificação do cliente.</param>
         /// <param name="nome">Nome do cliente.</param>

@@ -1,5 +1,6 @@
 using Agencia.Plataforma.Domain.Clients;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Agencia.Plataforma.Api.Controllers
@@ -30,7 +31,29 @@ namespace Agencia.Plataforma.Api.Controllers
             return Ok(client);
         }
 
-        /// <summary></summary>
+        [HttpGet("{nome}")]
+        public async Task<ActionResult<Client>> BuscarPorNome(string nome)
+        {
+            var client = await _clientService.BuscarClientePorNomeAsync(nome);
+            if (client == null)
+            {
+                return NotFound();
+            }
+            return Ok(client);
+        }
+        
+        public async Task<List<Client>> BuscarTodosClientes()
+        {
+            var client = await _clientService.BuscarTodosAsync();
+            if (client == null)
+            {
+                return NotFound();
+            }
+            return Ok(client);
+        }
+
+        
+        /// <summary>Cadastrar cliente.</summary>
         [HttpPost]
         public async Task<IActionResult> CadastrarCliente(string nome, string email, ClientType tipoDeCliente)
         {
