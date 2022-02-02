@@ -42,15 +42,15 @@ namespace Agencia.Plataforma.Api.Controllers
             return Ok(client);
         }
         
-        public async Task<List<Client>> BuscarTodosClientes()
-        {
-            var client = await _clientService.BuscarTodosAsync();
-            if (client == null)
-            {
-                return NotFound();
-            }
-            return Ok(client);
-        }
+        // public async Task<List<Client>> BuscarTodosClientes()
+        // {
+        //     // var client = await _clientService.BuscarTodosAsync();
+        //     // if (client == null)
+        //     // {
+        //     //     return NotFound();
+        //     // }
+        //     // return Ok(client);
+        // }
 
         
         /// <summary>Cadastrar cliente.</summary>

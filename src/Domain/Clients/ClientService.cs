@@ -48,11 +48,11 @@ namespace Agencia.Plataforma.Domain.Clients
 
         /// <summary>Recuperar no repositório os clientes cadastrados.</summary>
         /// <returns>Todos os clientes cadastrados.</returns>
-        public async Task<List<Client>> BuscarTodosAsync()
-        {
-            return await _clientRep.RecuperarTodosAsync();
+       // public async Task<List<Client>> BuscarTodosAsync()
+        // {
+        //     // return await _clientRep.RecuperarTodosAsync();
             
-        }
+        // }
 
 
         /// <summary>Edita no repositório um cliente.</summary>

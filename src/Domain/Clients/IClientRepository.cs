@@ -20,7 +20,7 @@ namespace Agencia.Plataforma.Domain.Clients
         
         /// <summary>Recuperar no repositório os clientes cadastrados.</summary>
         /// <returns>Todos os clientes cadastrados.</returns>
-        Task<List<ClientModel>> RecuperarTodosAsync();
+       // Task<List<ClientModel>> RecuperarTodosAsync();
                 
         
         /// <summary>Recupera na base de dados um cliente com base em seu código de identificação.</summary>

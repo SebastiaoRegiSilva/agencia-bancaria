@@ -23,7 +23,7 @@ namespace Agencia.DomainTests
         
         /// <summary>Método de preparação para os testes.</summary>
         [ClassInitialize]
-       public static void PrepareTestsData(TestContext context)
+        public static void PrepareTestsData(TestContext context)
         {
             var ptBR = new CultureInfo("pt-BR");
             Thread.CurrentThread.CurrentCulture = ptBR;
@@ -52,7 +52,7 @@ namespace Agencia.DomainTests
             string nome = "Bruno Vitor Enzo Dias";
             string email = "bruno@teste.com";
             var tipoCliente = ClientType.PessoaJuridica;
-         
+        
             string idCliente = await _clientService.CadastrarClienteAsync(nome, email, tipoCliente);
             
             // Verifica se os valores foram armazenados corretamente no repositório.

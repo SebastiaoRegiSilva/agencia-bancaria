@@ -56,14 +56,14 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients
 
         /// <summary>Recupera na base de dados todos os clientes cadastrados.</summary>
         /// <returns>Todos os cliente cadastrados.</returns>
-        public async Task<List<Client>> RecuperarTodosAsync()
-        {
-            var builder = Builders<ClientModel>.Filter;
+        // public async Task<List<Client>> RecuperarTodosAsync()
+        // {
+        //     // var builder = Builders<ClientModel>.Filter;
 
-            return await _ctxClient.Clientes
-                        .Find(s=>true)
-                        .ToListAsync();        
-        }
+        //     // return await _ctxClient.Clientes
+        //     //             .Find(s=>true)
+        //     //             .ToListAsync();        
+        // }
 
         /// <summary>Recupera na base de dados um cliente com base em seu código de identificação.</summary>
         /// <param name="nome">Nome do cliente a ser recuperado.</param>
