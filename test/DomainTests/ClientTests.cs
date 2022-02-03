@@ -31,12 +31,12 @@ namespace Agencia.DomainTests
             
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json"); // Está vazio, a Json da configuração está na minha máquina na Relier.
+                .AddJsonFile("appsettings.json");
 
             var config = builder.Build();
 
-            string conString = config.GetValue<string>("MongoDB:ConString");
-            string database = config.GetValue<string>("MongoDB:Database");
+            string conString = config.GetValue<string>("DB:MongoDB:ConString");
+            string database = config.GetValue<string>("DB:MongoDB:Database");
 
             var clientRepository = new ClientRepository(conString, database);
             _clientService = new ClientService(clientRepository);
@@ -89,5 +89,32 @@ namespace Agencia.DomainTests
             Assert.AreEqual(email, clienteDb.Email );
             Assert.AreEqual(tipoCliente, clienteDb.TipoDeCliente);
         }
+
+         [TestMethod]
+        public async Task EditarClientePorNomeAsync()
+        {
+            // Cadastrar um cliente.
+            string nome = "André Mattos de Oliveira";
+            string email = "andre@motiva.com";
+            var tipoCliente = ClientType.PessoaFisica;
+
+            string idCliente = await _clientService.CadastrarClienteAsync(nome, email, tipoCliente);
+            
+            // Editar o email e o tipo de conta. 
+            nome = "André Mattos";            
+            email = "andredeoliceira@motiva.com";
+            tipoCliente = ClientType.PessoaJuridica;
+
+            // Editar cliente.
+            await _clientService.EditarClienteAsync(idCliente, nome, email, tipoCliente);
+            
+            // Verifica se os valores foram armazenados corretamente no repositório.
+            var clienteDb = await _clientService.BuscarClientePorNomeAsync(nome);
+                        
+            Assert.AreEqual(nome, clienteDb.Nome );
+            Assert.AreEqual(email, clienteDb.Email );
+            Assert.AreEqual(tipoCliente, clienteDb.TipoDeCliente);
+        }
+
     }
 }

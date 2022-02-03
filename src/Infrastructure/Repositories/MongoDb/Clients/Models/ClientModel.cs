@@ -35,5 +35,20 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Clients.Models
                 clientModel.TipoDeCliente               
             );
         }
+
+        /// <summary>Converte um cliente no modelo do domínio para uma conta no contexto Mongo.</summary>
+        /// <param name="client">Cliente no modelo do domínio.</param>
+        public static implicit operator ClientModel(Client client)
+        {
+            if (client == null)
+                return null;
+
+            return new Client(
+                client.Id,
+                client.Nome,
+                client.Email,
+                client.TipoDeCliente               
+            );
+        }
     }  
 }
