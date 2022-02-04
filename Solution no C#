@@ -1,0 +1,6 @@
+Criar nova solution 
+dotnet new sln --name "your solution name"
+
+Adicional o CSPROJ a Solution
+dotnet sln add "caminho do .csproj".
+

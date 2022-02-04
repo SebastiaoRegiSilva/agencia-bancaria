@@ -19,8 +19,8 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <param name="clientRep">Serviço que provê acesso aos dados e operaçãoes dos clientes.</param>
         public AccountService(IAccountRepository accountRep, ClientService clientService)
         {
-           _accountRep = accountRep;
-           _clientService = clientService;
+            _accountRep = accountRep;
+            _clientService = clientService;
         }
         
         /// <summary>Recuperar no repositório a conta com base em seu número.</summary>
@@ -40,7 +40,6 @@ namespace Agencia.Plataforma.Domain.Accounts
         }            
 
         /// <summary>Cadastra no repositório uma nova conta no sistema.</summary>
-        /// <param name="id">Código de identificação da conta.</param>
         /// <param name="numeroConta">Número da conta do cliente.</param>
         /// <param name="idcliente">Código de ideintificação.</param>
         /// <param name="tipoDaConta">Tipo da conta.</param>
@@ -50,13 +49,14 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <param name="saldo">Quantidade de saldo em conta.</param>
         /// <param name="statusDaConta">Situação da conta do cliente.</param>
         /// <returns>Código de identificação gerado para a conta cadastrada.</returns>
-        public async Task CadastrarContaAsync(string id, int numeroConta, string idCliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
+        public async Task <string> CadastrarContaAsync(int numeroConta, string idCliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
         DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
         {
             var clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
             
-            await _accountRep.CadastrarContaAsync(id, numeroConta, clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            var idConta = await _accountRep.CadastrarContaAsync(numeroConta, clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
 
+            return (idConta);
         }
         
         /// <summary>Edita no repositório uma conta cadastrada no sistema.</summary>

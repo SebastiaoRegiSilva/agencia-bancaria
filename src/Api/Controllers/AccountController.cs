@@ -49,7 +49,7 @@ namespace Agencia.Plataforma.Api.Controllers
             dataAlteracao = DateTime.Now;
             saldo = 0;
 
-            await _accountService.CadastrarContaAsync(id, numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            await _accountService.CadastrarContaAsync(numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
             return Ok();
         }
 

@@ -42,8 +42,7 @@ namespace Agencia.DomainTests
             _clientService = new ClientService(clientRepository);
 
             var accountRepository = new AccountRepository(conString, database);
-            _accountService = new AccountService(accountRepository, _clientService);                
-        
+            _accountService = new AccountService(accountRepository, _clientService);
         }
 
         [TestMethod]
@@ -90,7 +89,7 @@ namespace Agencia.DomainTests
             Assert.AreEqual(tipoCliente, clienteDb.TipoDeCliente);
         }
 
-         [TestMethod]
+        [TestMethod]
         public async Task EditarClientePorNomeAsync()
         {
             // Cadastrar um cliente.
@@ -116,5 +115,22 @@ namespace Agencia.DomainTests
             Assert.AreEqual(tipoCliente, clienteDb.TipoDeCliente);
         }
 
+        [TestMethod]
+        public async Task DeletarClienteAsync()
+        {
+            // Cadastrar um cliente.
+            string nome = "Nivaldo Vieira Gomes";
+            string email = "gusttavolima@balladamusic.com";
+            var tipoCliente = ClientType.PessoaJuridica;
+
+            string idCliente = await _clientService.CadastrarClienteAsync(nome, email, tipoCliente);
+            
+            // Exclui u cliente.
+            await _clientService.DeletarClienteAsync(idCliente);
+            
+            // Verifica se os valores foram armazenados corretamente no repositório.
+            var clienteDb = await _clientService.BuscarClientePorNomeAsync(nome);
+                        
+        }
     }
 }
