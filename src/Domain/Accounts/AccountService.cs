@@ -87,12 +87,13 @@ namespace Agencia.Plataforma.Domain.Accounts
 
         // Operações com a conta.
         
-        /// <summary>.</summary>
+        /// <summary>Depositar saldo na conta do cliente.</summary>
         /// <param name="accountNumber">Número da conta do cliente.</param>
         /// <param name="value">Valor em reais a ser depositado na conta do cliente.</param>
-        static void Depositar(int accountNumber, decimal value)
+        public async Task DepositarAsync(int accountNumber, decimal value)
         {    
-        
+            await _accountRep.DepositarContaAsync(accountNumber, value);
+
         }
     
     }

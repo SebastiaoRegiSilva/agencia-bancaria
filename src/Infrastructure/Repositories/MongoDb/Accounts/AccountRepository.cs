@@ -120,5 +120,17 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
 
             await _ctxAccount.Contas.DeleteOneAsync(filter);
         }
+
+        /// <summary>Realiza depósito em conta com base no númera do conta.</summary>
+        /// <param name="numeroConta">Número da conta.</param>
+        /// <param name="valor">Valor a ser depositado na conta.</param>
+        public async Task DepositarContaAsync(int numeroConta, decimal valor)
+        {
+            var filter = Builders<AccountModel>.Filter.Eq(a => a.NumeroConta, numeroConta);
+            var update = Builders<AccountModel>.Update
+                .Set(a => a.Saldo, valor);
+
+            await _ctxAccount.Contas.UpdateOneAsync(filter, update);
+        }
     }
 }

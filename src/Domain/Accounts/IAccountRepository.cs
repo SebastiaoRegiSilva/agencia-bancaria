@@ -46,5 +46,10 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <summary>Exclui na base de dados uma conta cadastrada no sistema.</summary>
         /// <param name="numeroConta">Número da conta.</param>
         Task ExcluirContaAsync(int numeroConta);
+
+        /// <summary>Realiza depósito em conta com base no númera do conta.</summary>
+        /// <param name="numeroConta">Número da conta.</param>
+        /// <param name="valor">Valor a ser depositado na conta.</param>
+        Task DepositarContaAsync(int numeroConta, decimal valor);
     }
 }
