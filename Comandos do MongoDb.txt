@@ -1,0 +1,3 @@
+#Dropar uma collection...
+
+db.getSiblingDB("agencia-bancaria").getCollection("Clientes").drop();

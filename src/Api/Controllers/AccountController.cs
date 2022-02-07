@@ -27,7 +27,7 @@ namespace Agencia.Plataforma.Api.Controllers
             {
                 return NotFound();
             }
-            return Ok(account);
+            return account;
         }
 
         [HttpGet("{id}")]
@@ -38,22 +38,22 @@ namespace Agencia.Plataforma.Api.Controllers
             {
                 return NotFound();
             }
-            return Ok(account);
+            return account;
         }
 
-        // [HttpPost]
-        // public async Task<IActionResult> CadastrarNovaConta(string id, int numeroConta, string idCliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
-        // {
-        //     // // Recuperar um clienta para cadastrar uma nova conta.
-        //     // var clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
+        [HttpPost("{idCliente}")]
+        public async Task<IActionResult> CadastrarNovaConta(string idCliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
+        {
+            // Recuperar um clienta para cadastrar uma nova conta.
+            var clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
 
-        //     dataCadastro = DateTime.Now;
-        //     dataAlteracao = DateTime.Now;
-        //     saldo = 0;
+            dataCadastro = DateTime.Now;
+            dataAlteracao = DateTime.Now;
+            saldo = 0;
 
-        //     await _accountService.CadastrarContaAsync(numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
-        //     return Ok();
-        // }
+            await _accountService.CadastrarContaAsync(idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            return Ok();
+        }
 
         [HttpPut]
         public async Task<IActionResult> EditarConta(string id, int numeroConta, Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
@@ -75,7 +75,7 @@ namespace Agencia.Plataforma.Api.Controllers
             return NoContent();
         }
 
-        [HttpPost]
+        [HttpPost("{numeroConta}")]
         public async Task<ActionResult> Depositar(int numeroConta, decimal valor)
         {
             await _accountService.DepositarAsync(numeroConta, valor);

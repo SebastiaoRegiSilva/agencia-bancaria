@@ -57,5 +57,14 @@ namespace Agencia.Plataforma.Domain.Accounts
             Saldo = saldo;
             Status = statusDaConta;
         }
+        
+        /// <summary>Gerar um número aleatório para setar o número da conta que deve ser único da conta do cliente.</summary>
+        public static int GerarNumeroConta()
+        {
+            Random random = new Random();
+            int numeroConta = random.Next();
+
+            return numeroConta;
+        }
     }  
 }

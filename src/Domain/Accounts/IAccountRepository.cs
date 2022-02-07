@@ -8,7 +8,6 @@ namespace Agencia.Plataforma.Domain.Accounts
     public interface IAccountRepository
     {
         /// <summary>Cadastra na base de dados uma nova conta no sistema.</summary>
-       /// <param name="numeroConta">Número da conta do cliente.</param>
         /// <param name="cliente">Proprietário da conta.</param>
         /// <param name="tipoDaConta">Tipo da conta.</param>
         /// <param name="dataCadastro">Data em que o cliente foi cadastrado no sistema.</param>
@@ -17,7 +16,7 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <param name="saldo">Quantidade de saldo em conta.</param>
         /// <param name="statusDaConta">Situação da conta do cliente.</param>
         /// <returns>Código de identificação gerado para a conta cadastrada.</returns>
-        Task<string> CadastrarContaAsync(int numeroConta, Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
+        Task<string> CadastrarContaAsync(Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
         DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta);
         
         /// <summary>Recupera na base de dados uma conta com base em seu número.</summary>

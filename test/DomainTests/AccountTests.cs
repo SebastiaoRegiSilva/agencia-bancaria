@@ -55,7 +55,6 @@ namespace Agencia.DomainTests
             var tipoCliente = ClientType.PessoaFisica;
 
             // Cadastrar uma nova conta.
-            int numeroConta = 0;
             string idCliente = await _clientService.CadastrarClienteAsync(nome, email, tipoCliente);
             AccountType tipoDaConta = AccountType.Corrente;
             DateTime dataCadastro = DateTime.UtcNow;
@@ -65,12 +64,11 @@ namespace Agencia.DomainTests
             AccountStatus statusDaConta = AccountStatus.Bloqueada;
 
         
-            var idConta = await _accountService.CadastrarContaAsync(numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            var idConta = await _accountService.CadastrarContaAsync(idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
         
             // Verifica se os valores foram armazenados corretamente no repositório.
             var accountDb = await _accountService.BuscarContaPorIdAsync(idConta);
                         
-            Assert.AreEqual(numeroConta, 0);
             Assert.AreEqual(idCliente, accountDb.Cliente.Id);
             Assert.AreEqual(tipoDaConta, accountDb.Tipo);
             /* Assert.AreEqual<DateTime>(dataCadastro, accountDb.DataCadastro);
@@ -91,7 +89,6 @@ namespace Agencia.DomainTests
             var tipoCliente = ClientType.PessoaFisica;
 
             // Cadastrar uma nova conta.
-            int numeroConta = 1;
             string idCliente = await _clientService.CadastrarClienteAsync(nome, email, tipoCliente);
             Client clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
             AccountType tipoDaConta = AccountType.Poupanca;
@@ -102,10 +99,12 @@ namespace Agencia.DomainTests
             AccountStatus statusDaConta = AccountStatus.Bloqueada;
 
         
-            var idConta = await _accountService.CadastrarContaAsync(numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            var idConta = await _accountService.CadastrarContaAsync(idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            
+            // Recuperar na base a conta cadastrada.
+            var accountDb = await _accountService.BuscarContaPorIdAsync(idConta);
 
             // Editar características da conta.       
-            numeroConta = 15;
             tipoDaConta = AccountType.Poupanca;
             dataCadastro = DateTime.UtcNow;
             dataUltimoAcesso = new DateTime();
@@ -113,12 +112,11 @@ namespace Agencia.DomainTests
             saldo = 154.14M;
             statusDaConta = AccountStatus.Ativa;
             
-            await _accountService.EditarContaAsync(idConta, numeroConta, clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            await _accountService.EditarContaAsync(idConta, accountDb.NumeroConta, clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
             
             // Verifica se os valores foram armazenados corretamente no repositório.
-            var accountDb = await _accountService.BuscarContaPorIdAsync(idConta);
+            accountDb = await _accountService.BuscarContaPorIdAsync(idConta);
                         
-            Assert.AreEqual(numeroConta, 15);
             Assert.AreEqual(idCliente, accountDb.Cliente.Id);
             Assert.AreEqual(tipoDaConta, accountDb.Tipo);
             /* Assert.AreEqual<DateTime>(dataCadastro, accountDb.DataCadastro);
@@ -137,7 +135,6 @@ namespace Agencia.DomainTests
             var tipoCliente = ClientType.PessoaJuridica;
 
             // Cadastrar uma nova conta.
-            int numeroConta = 7;
             string idCliente = await _clientService.CadastrarClienteAsync(nome, email, tipoCliente);
             Client clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
             AccountType tipoDaConta = AccountType.Poupanca;
@@ -147,23 +144,23 @@ namespace Agencia.DomainTests
             decimal saldo = 0;
             AccountStatus statusDaConta = AccountStatus.Bloqueada;
 
-        
-            var idConta = await _accountService.CadastrarContaAsync(numeroConta, idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
-
-            // Realizar depósitos na conta do cliente cadastrado.
-            await _accountService.DepositarAsync(numeroConta, 174.41M);       
+            var idConta = await _accountService.CadastrarContaAsync(idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
             
-
-            // Verifica se os valores foram armazenados corretamente no repositório.
+            // Recuperar na base uma conta cadastrada.
             var accountDb = await _accountService.BuscarContaPorIdAsync(idConta);
-                        
-            Assert.AreEqual(numeroConta, 7);
+            
+            // Realizar depósitos na conta do cliente cadastrado.
+            await _accountService.DepositarAsync(accountDb.NumeroConta, 174.41M);       
+            
+            // Verifica se os valores foram armazenados corretamente no repositório.
+            accountDb = await _accountService.BuscarContaPorIdAsync(idConta);
+            
             Assert.AreEqual(idCliente, accountDb.Cliente.Id);
             Assert.AreEqual(tipoDaConta, accountDb.Tipo);
             /* Assert.AreEqual<DateTime>(dataCadastro, accountDb.DataCadastro);
             Assert.AreEqual(dataUltimoAcesso, accountDb.DataUltimoAcesso);        VERIFICAR A QUESTÃO DAS DATAS.
             Assert.AreEqual(dataAlteracao, accountDb.DataAlteracao.Value);*/
-            Assert.AreEqual(saldo, 174.41M);
+            Assert.AreEqual(174.41M, accountDb.Saldo);
             Assert.AreEqual(statusDaConta, accountDb.Status);
         }
 

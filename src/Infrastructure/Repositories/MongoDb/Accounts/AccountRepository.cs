@@ -32,9 +32,13 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
         /// <param name="saldo">Quantidade de saldo em conta.</param>
         /// <param name="statusDaConta">Situação da conta do cliente.</param>
         /// <returns>Código de identificação gerado para a conta cadastrada.</returns>
-        public async Task<string> CadastrarContaAsync(int numeroConta, Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
+        public async Task<string> CadastrarContaAsync(Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
         DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
         {
+            // TODO: Mecanismo para impedir duas contas com o mesmo número.
+            
+            int numeroConta = Account.GerarNumeroConta();
+
             var model = new AccountModel
             {
                 NumeroConta = numeroConta,
@@ -83,7 +87,7 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
 
 
         /// <summary>Edita na base de dados uma conta cadastrada no sistema.</summary>
-        // <param name="id">Código de identificação da conta.</param>
+        /// <param name="id">Código de identificação da conta.</param>
         /// <param name="numeroConta">Número da conta do cliente.</param>
         /// <param name="cliente">Proprietário da conta.</param>
         /// <param name="tipoDaConta">Tipo da conta.</param>
@@ -128,7 +132,8 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
         {
             var filter = Builders<AccountModel>.Filter.Eq(a => a.NumeroConta, numeroConta);
             var update = Builders<AccountModel>.Update
-                .Set(a => a.Saldo, valor);
+                .Set(a => a.Saldo, valor)
+                .Set(a => a.DataUltimoAcesso, DateTime.UtcNow);
 
             await _ctxAccount.Contas.UpdateOneAsync(filter, update);
         }
