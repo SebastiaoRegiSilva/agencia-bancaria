@@ -1,5 +1,4 @@
 using Agencia.Plataforma.Domain.Clients;
-using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 
 namespace Agencia.Plataforma.Infrastructure.Repositories.SqlServer.Clients
@@ -17,13 +16,6 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.SqlServer.Clients
             _conString = connectionString;
         }
 
-        /// <summary>CUIDADO! Remove todos os clientes do repositório.</summary>
-        public void LimparTudo()
-        {
-            var cmd = @"delete from client";
-
-            MySqlHelper.ExecuteNonQuery(_conString, cmd);
-        }
         Task<string> IClientRepository.CadastrarClienteAsync(string nome, string email, ClientType tipoDeCliente)
         {
             throw new System.NotImplementedException();
