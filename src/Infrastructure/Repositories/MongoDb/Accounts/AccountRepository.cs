@@ -133,6 +133,7 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
             var filter = Builders<AccountModel>.Filter.Eq(a => a.NumeroConta, numeroConta);
             var update = Builders<AccountModel>.Update
                 .Set(a => a.Saldo, valor)
+                .Set(a => a.DataUltimoAcesso, DateTime.UtcNow)
                 .Set(a => a.DataUltimoAcesso, DateTime.UtcNow);
 
             await _ctxAccount.Contas.UpdateOneAsync(filter, update);
