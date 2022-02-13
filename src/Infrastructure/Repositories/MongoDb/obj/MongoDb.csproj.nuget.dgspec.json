@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -108,7 +108,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.12.1, )"
+              "version": "[2.14.1, )"
             }
           },
           "imports": [
@@ -126,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }
