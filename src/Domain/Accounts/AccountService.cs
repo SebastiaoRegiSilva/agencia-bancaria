@@ -54,7 +54,7 @@ namespace Agencia.Plataforma.Domain.Accounts
             
             var clienteRecuperado = await _clientService.BuscarClientePorIdAsync(idCliente);
             
-            string idConta = await _accountRep.CadastrarContaAsync(clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            var idConta = await _accountRep.CadastrarContaAsync(clienteRecuperado, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
 
             return idConta;
         }
@@ -93,8 +93,6 @@ namespace Agencia.Plataforma.Domain.Accounts
         public async Task DepositarAsync(int accountNumber, decimal value)
         {    
             await _accountRep.DepositarContaAsync(accountNumber, value);
-
         }
-    
     }
 }

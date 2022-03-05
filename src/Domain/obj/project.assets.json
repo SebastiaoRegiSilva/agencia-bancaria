@@ -723,23 +723,19 @@
     ]
   },
   "packageFolders": {
-    "/home/relier/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/sebastiaosilva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+      "projectUniqueName": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj",
       "projectName": "Agencia.Plataforma.Domain",
-      "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
-      "packagesPath": "/home/relier/.nuget/packages/",
-      "outputPath": "/home/relier/projetos/agencia-bancaria/src/Domain/obj/",
+      "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+      "packagesPath": "/home/sebastiaosilva/.nuget/packages/",
+      "outputPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/home/relier/.nuget/NuGet/NuGet.Config"
+        "/home/sebastiaosilva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -783,7 +779,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
       }
     }
   }

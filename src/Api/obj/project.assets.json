@@ -492,7 +492,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Agencia.Plataforma.Domain": "1.0.0",
-          "MongoDB.Driver": "2.12.1"
+          "MongoDB.Driver": "2.14.1"
         },
         "compile": {
           "bin/placeholder/MongoDb.dll": {}
@@ -1287,23 +1287,19 @@
     ]
   },
   "packageFolders": {
-    "/home/relier/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/sebastiaosilva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Api/Api.csproj",
+      "projectUniqueName": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/Api.csproj",
       "projectName": "Api",
-      "projectPath": "/home/relier/projetos/agencia-bancaria/src/Api/Api.csproj",
-      "packagesPath": "/home/relier/.nuget/packages/",
-      "outputPath": "/home/relier/projetos/agencia-bancaria/src/Api/obj/",
+      "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/Api.csproj",
+      "packagesPath": "/home/sebastiaosilva/.nuget/packages/",
+      "outputPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/home/relier/.nuget/NuGet/NuGet.Config"
+        "/home/sebastiaosilva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1315,11 +1311,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
-              "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj"
+            "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+              "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj"
             },
-            "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
-              "projectPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj"
+            "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
+              "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj"
             }
           }
         }
@@ -1361,7 +1357,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,3 @@
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/appsettings.Development.json
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/appsettings.json
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/Api
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/Api.deps.json
@@ -343,8 +342,6 @@
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/runtimes/linux/native/libmongocrypt.so
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/runtimes/osx/native/libmongocrypt.dylib
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/runtimes/win/native/mongocrypt.dll
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.dll
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.pdb
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/obj/Debug/net5.0/Api.csproj.AssemblyReference.cache
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/obj/Debug/net5.0/Api.GeneratedMSBuildEditorConfig.editorconfig
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Api/obj/Debug/net5.0/Api.AssemblyInfoInputs.cache
@@ -1453,3 +1450,7 @@
 /home/sebastiao/projetos/agencia-bancaria/src/Api/obj/Debug/net5.0/ref/Api.dll
 /home/sebastiao/projetos/agencia-bancaria/src/Api/obj/Debug/net5.0/Api.pdb
 /home/sebastiao/projetos/agencia-bancaria/src/Api/obj/Debug/net5.0/Api.genruntimeconfig.cache
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/Agencia.Plataforma.Domain.dll
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/MongoDb.dll
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/Agencia.Plataforma.Domain.pdb
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/bin/Debug/net5.0/MongoDb.pdb

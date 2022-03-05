@@ -1,7 +1,3 @@
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.deps.json
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.dll
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/ref/Agencia.Bancaria.Plataforma.Domain.dll
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.pdb
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/refs/Microsoft.AspNetCore.Antiforgery.dll
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/refs/Microsoft.AspNetCore.Authentication.Abstractions.dll
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/refs/Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -290,9 +286,6 @@
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
 /home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.dll
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/ref/Agencia.Bancaria.Plataforma.Domain.dll
-/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Agencia.Bancaria.Plataforma.Domain.pdb
 /media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/bin/Debug/net5.0/refs/Microsoft.AspNetCore.Antiforgery.dll
 /media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/bin/Debug/net5.0/refs/Microsoft.AspNetCore.Authentication.Abstractions.dll
 /media/relier/8874-20B9/projetos/csharp/agencia-bancaria/src/Domain/bin/Debug/net5.0/refs/Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -1178,3 +1171,10 @@
 /home/sebastiao/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Agencia.Plataforma.Domain.dll
 /home/sebastiao/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/ref/Agencia.Plataforma.Domain.dll
 /home/sebastiao/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Agencia.Plataforma.Domain.pdb
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/Agencia.Plataforma.Domain.deps.json
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/Agencia.Plataforma.Domain.dll
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/ref/Agencia.Plataforma.Domain.dll
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/bin/Debug/net5.0/Agencia.Plataforma.Domain.pdb
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Agencia.Plataforma.Domain.dll
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/ref/Agencia.Plataforma.Domain.dll
+/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/obj/Debug/net5.0/Agencia.Plataforma.Domain.pdb

@@ -22,8 +22,6 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
         }
 
         /// <summary>Cadastra na base de dados uma nova conta no sistema.</summary>
-        /// <param name="id">Código de identificação da conta.</param>
-        /// <param name="numeroConta">Número da conta do cliente.</param>
         /// <param name="cliente">Proprietário da conta.</param>
         /// <param name="tipoDaConta">Tipo da conta.</param>
         /// <param name="dataCadastro">Data em que o cliente foi cadastrado no sistema.</param>

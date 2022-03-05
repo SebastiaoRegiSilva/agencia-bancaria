@@ -24,9 +24,8 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var client = await _clientService.BuscarClientePorIdAsync(id);
             if (client == null)
-            {
                 return NotFound();
-            }
+            
             return Ok(client);
         }
 
@@ -35,9 +34,8 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var client = await _clientService.BuscarClientePorNomeAsync(nome);
             if (client == null)
-            {
                 return NotFound();
-            }
+            
             return Ok(client);
         }
         
@@ -54,9 +52,8 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var queriedClient = await _clientService.BuscarClientePorIdAsync(id);
             if(queriedClient == null)
-            {
                 return NotFound();
-            }
+            
             await _clientService.EditarClienteAsync(id, nome, email, tipoDeCliente);
             return NoContent();
         }
@@ -66,9 +63,8 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var client = await _clientService.BuscarClientePorIdAsync(id);
             if (client == null)
-            {
                 return NotFound();
-            }
+            
             await _clientService.DeletarClienteAsync(id);
             return NoContent();
         }

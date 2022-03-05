@@ -24,9 +24,8 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var account = await _accountService.BuscarContaPorNumeroAsync(numeroConta);
             if (account == null)
-            {
                 return NotFound();
-            }
+            
             return account;
         }
 
@@ -35,9 +34,8 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var account = await _accountService.BuscarContaPorIdAsync(id);
             if (account == null)
-            {
                 return NotFound();
-            }
+            
             return account;
         }
 
@@ -49,9 +47,9 @@ namespace Agencia.Plataforma.Api.Controllers
 
             dataCadastro = DateTime.Now;
             dataAlteracao = DateTime.Now;
-            saldo = 0;
-
+            
             await _accountService.CadastrarContaAsync(idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
+            
             return Ok();
         }
 
@@ -68,14 +66,13 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             var account = await _accountService.BuscarContaPorNumeroAsync(numeroConta);
             if (account == null)
-            {
                 return NotFound();
-            }
+            
             await _accountService.ExcluirContaAsync(numeroConta);
             return NoContent();
         }
 
-        [HttpPost("{numeroConta}")]
+        [HttpPost]
         public async Task<ActionResult> Depositar(int numeroConta, decimal valor)
         {
             await _accountService.DepositarAsync(numeroConta, valor);
