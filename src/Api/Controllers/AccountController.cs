@@ -73,9 +73,9 @@ namespace Agencia.Plataforma.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Depositar(int numeroConta, decimal valor)
+        public async Task<ActionResult> Depositar(int numeroConta, double valor)
         {
-            await _accountService.DepositarAsync(numeroConta, valor);
+            await _accountService.DepositarAsync(numeroConta, (decimal)valor);
             return Ok($"Depositado!");
         }
     }

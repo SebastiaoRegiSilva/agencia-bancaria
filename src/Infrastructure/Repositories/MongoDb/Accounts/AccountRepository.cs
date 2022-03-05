@@ -128,13 +128,29 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
         /// <param name="valor">Valor a ser depositado na conta.</param>
         public async Task DepositarContaAsync(int numeroConta, decimal valor)
         {
+            var saldoAtualizar = RecuperarSaldoAsync(numeroConta).Result;
+
+            saldoAtualizar += valor;
+            
             var filter = Builders<AccountModel>.Filter.Eq(a => a.NumeroConta, numeroConta);
             var update = Builders<AccountModel>.Update
-
-                .Inc(a => a.Saldo, valor)
+                .Set(a => a.Saldo, saldoAtualizar)
                 .Set(a => a.DataUltimoAcesso, DateTime.UtcNow);
 
             await _ctxAccount.Contas.UpdateOneAsync(filter, update);
+        }
+
+        /// <summary>Recuperar o saldo em conta de um cliente cadastrado.</summary>
+        /// <param name="numeroConta">Número da conta.</param>
+        ///<returns>Saldo em conta.</returns>
+        public async Task<decimal> RecuperarSaldoAsync(int numeroConta)
+        {
+            var contaRecuperada = RecuperarContaPorNumeroAsync(numeroConta);
+
+            /// Forçar o método a ser concluído de forma assíncrona. 
+            await Task.Yield();
+
+            return contaRecuperada.Result.Saldo;
         }
     }
 }
