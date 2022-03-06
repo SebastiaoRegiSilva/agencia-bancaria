@@ -50,5 +50,10 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <param name="numeroConta">Número da conta.</param>
         /// <param name="valor">Valor a ser depositado na conta.</param>
         Task DepositarContaAsync(int numeroConta, decimal valor);
+
+        /// <summary>Recuperar na base de dados o saldo em conta de um cliente cadastrado.</summary>
+        /// <param name="numeroConta">Número da conta.</param>
+        ///<returns>Saldo em conta.</returns>
+        Task<decimal> RecuperarSaldoAsync(int numeroConta);
     }
 }

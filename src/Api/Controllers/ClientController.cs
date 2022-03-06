@@ -1,4 +1,5 @@
 using Agencia.Plataforma.Domain.Clients;
+using Agencia.Plataforma.Domain.Clients.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -43,6 +44,9 @@ namespace Agencia.Plataforma.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CadastrarCliente(string nome, string email, ClientType tipoDeCliente)
         {
+            if(! _clientService.ValidarEmailAsync(email).Result)
+                throw new AddressEmailInvalidException(email);
+            
             await _clientService.CadastrarClienteAsync(nome, email, tipoDeCliente);         
             return Ok();
         }
@@ -54,6 +58,9 @@ namespace Agencia.Plataforma.Api.Controllers
             if(queriedClient == null)
                 return NotFound();
             
+            if(! _clientService.ValidarEmailAsync(email).Result)
+                throw new AddressEmailInvalidException(email);
+
             await _clientService.EditarClienteAsync(id, nome, email, tipoDeCliente);
             return NoContent();
         }

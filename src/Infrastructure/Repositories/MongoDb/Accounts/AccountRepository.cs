@@ -33,9 +33,12 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
         public async Task<string> CadastrarContaAsync(Client cliente, AccountType tipoDaConta, DateTime dataCadastro, DateTime dataUltimoAcesso, 
         DateTime dataAlteracao, decimal saldo, AccountStatus statusDaConta)
         {
-            // TODO: Mecanismo para impedir duas contas com o mesmo número.
-            
+            // Mecanismo para impedir duas contas com o mesmo número.
             int numeroConta = Account.GerarNumeroConta();
+            var contaRecuperada = RecuperarContaPorNumeroAsync(numeroConta);
+
+            while(contaRecuperada.Result != null)
+                numeroConta = Account.GerarNumeroConta();
 
             var model = new AccountModel
             {
@@ -123,7 +126,7 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
             await _ctxAccount.Contas.DeleteOneAsync(filter);
         }
 
-        /// <summary>Realiza depósito em conta com base no númera do conta.</summary>
+        /// <summary>Realiza depósito em conta com base no número do conta.</summary>
         /// <param name="numeroConta">Número da conta.</param>
         /// <param name="valor">Valor a ser depositado na conta.</param>
         public async Task DepositarContaAsync(int numeroConta, decimal valor)

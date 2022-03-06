@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Agencia.Plataforma.Domain.Clients
@@ -34,7 +34,6 @@ namespace Agencia.Plataforma.Domain.Clients
         public async Task<Client> BuscarClientePorIdAsync(string id)
         {
             return await _clientRep.RecuperarClientePorIdAsync(id);
-            
         }
         
         /// <summary>Recuperar no repositório um cliente com base no seu código de identificação.</summary>
@@ -43,7 +42,6 @@ namespace Agencia.Plataforma.Domain.Clients
         public async Task<Client> BuscarClientePorNomeAsync(string nome)
         {
             return await _clientRep.RecuperarClientePorNomeAsync(nome);
-            
         }
 
         /// <summary>Edita no repositório um cliente.</summary>
@@ -61,6 +59,17 @@ namespace Agencia.Plataforma.Domain.Clients
         public async Task DeletarClienteAsync(string id)
         {
             await _clientRep.ExcluirClienteAsync(id);
+        }
+
+        /// <summary>Validar se o formato do endereço de e-mail está correto.</summary>
+        /// <param name="email">Endereço de e-mail a ser validado.</param>
+        public async Task<bool> ValidarEmailAsync(string email)
+        {
+            var emailRegex = new Regex(@"^[\w-.]+@([\w-]+.)+[\w-]{2,4}$");
+            
+            await Task.Yield();
+
+            return emailRegex.IsMatch(email);
         }
     }
 }

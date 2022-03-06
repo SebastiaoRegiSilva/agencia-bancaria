@@ -50,7 +50,7 @@ namespace Agencia.Plataforma.Api.Controllers
             
             await _accountService.CadastrarContaAsync(idCliente, tipoDaConta, dataCadastro, dataUltimoAcesso, dataAlteracao, saldo, statusDaConta);
             
-            return Ok();
+            return Ok($"O cliente {clienteRecuperado.Nome} agora possui uma conta.");
         }
 
         [HttpPut]
@@ -72,11 +72,20 @@ namespace Agencia.Plataforma.Api.Controllers
             return NoContent();
         }
 
-        [HttpPost]
+        [HttpPost, Route("Depositar")]
         public async Task<ActionResult> Depositar(int numeroConta, double valor)
         {
             await _accountService.DepositarAsync(numeroConta, (decimal)valor);
             return Ok($"Depositado!");
         }
+
+        [HttpGet, Route("VerificarSaldo")]
+        public async Task<ActionResult> VerificarSaldo(int numeroConta)
+        {
+            decimal saldo = await _accountService.VerificarSaldoAsync(numeroConta);
+            
+            return Ok($"R${saldo} em conta!");
+        }
+    
     }
 }

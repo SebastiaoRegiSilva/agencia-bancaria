@@ -85,14 +85,19 @@ namespace Agencia.Plataforma.Domain.Accounts
             await _accountRep.ExcluirContaAsync(numeroConta);
         }
 
-        // Operações com a conta.
-        
         /// <summary>Depositar saldo na conta do cliente.</summary>
         /// <param name="accountNumber">Número da conta do cliente.</param>
         /// <param name="value">Valor em reais a ser depositado na conta do cliente.</param>
         public async Task DepositarAsync(int accountNumber, decimal value)
         {    
             await _accountRep.DepositarContaAsync(accountNumber, value);
+        }
+
+        /// <summary>Verificar saldo na conta do cliente.</summary>
+        /// <param name="numeroConta">Número da conta do cliente.</param>
+        public async Task<Decimal> VerificarSaldoAsync(int numeroConta)
+        {
+            return await _accountRep.RecuperarSaldoAsync(numeroConta);
         }
     }
 }
