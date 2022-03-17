@@ -84,8 +84,14 @@ namespace Agencia.Plataforma.Api.Controllers
         {
             decimal saldo = await _accountService.VerificarSaldoAsync(numeroConta);
             
-            return Ok($"R${saldo} em conta!");
+            return Ok($"Você possui R${saldo} em conta!");
         }
-    
+
+        [HttpPost, Route("Sacar")]
+        public async Task<ActionResult> Sacar(int numeroConta, double valor)
+        {
+            await _accountService.SacarAsync(numeroConta, (decimal)valor);
+            return Ok($"Saque na sua conta de R${valor}");
+        }
     }
 }
