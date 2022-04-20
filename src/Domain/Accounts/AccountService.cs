@@ -99,5 +99,14 @@ namespace Agencia.Plataforma.Domain.Accounts
         {
             return await _accountRep.RecuperarSaldoAsync(numeroConta);
         }
+
+        /// <summary>Sacar na conta do cliente.</summary>
+        /// <param name="accountNumber">Número da conta do cliente.</param>
+        /// <param name="value">Valor em reais a ser sacado na conta do cliente.</param>
+        public async Task SacarAsync(int accountNumber, decimal value)
+        {    
+            await _accountRep.SacarContaAsync(accountNumber, value);
+        }
+
     }
 }

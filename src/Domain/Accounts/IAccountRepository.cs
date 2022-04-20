@@ -55,5 +55,10 @@ namespace Agencia.Plataforma.Domain.Accounts
         /// <param name="numeroConta">Número da conta.</param>
         ///<returns>Saldo em conta.</returns>
         Task<decimal> RecuperarSaldoAsync(int numeroConta);
+
+        /// <summary>Sacar na conta do cliente.</summary>
+        /// <param name="accountNumber">Número da conta do cliente.</param>
+        /// <param name="value">Valor em reais a ser sacado na conta do cliente.</param>
+        Task SacarContaAsync(int accountNumber, decimal value);
     }
 }

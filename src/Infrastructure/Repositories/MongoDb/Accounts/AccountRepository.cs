@@ -155,5 +155,25 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
 
             return contaRecuperada.Result.Saldo;
         }
+
+        /// <summary>Realiza saque em conta com base no número do conta e valor.</summary>
+        /// <param name="numeroConta">Número da conta.</param>
+        /// <param name="valor">Valor a ser sacado na conta.</param>
+        public async Task SacarContaAsync(int numeroConta, decimal valor)
+        {
+            var saldo = RecuperarSaldoAsync(numeroConta).Result;
+
+            //if(saldo < valor);
+                // Implementar aqui que a operação é inválida.
+            //else
+                saldo-=valor;
+
+            var filter = Builders<AccountModel>.Filter.Eq(a => a.NumeroConta, numeroConta);
+            var update = Builders<AccountModel>.Update
+                .Set(a => a.Saldo, saldo)
+                .Set(a => a.DataUltimoAcesso, DateTime.UtcNow);
+
+            await _ctxAccount.Contas.UpdateOneAsync(filter, update);
+        }
     }
 }
