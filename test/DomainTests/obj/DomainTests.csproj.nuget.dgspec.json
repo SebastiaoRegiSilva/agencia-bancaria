@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/relier/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj": {}
+    "/home/sebastiaowillian/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj": {}
   },
   "projects": {
-    "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+    "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+        "projectUniqueName": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj",
         "projectName": "Agencia.Plataforma.Domain",
-        "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
-        "packagesPath": "/home/relier/.nuget/packages/",
-        "outputPath": "/home/relier/projetos/agencia-bancaria/src/Domain/obj/",
+        "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+        "packagesPath": "/home/sebastiaowillian/.nuget/packages/",
+        "outputPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/relier/.nuget/NuGet/NuGet.Config"
+          "/home/sebastiaowillian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -61,24 +58,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
+    "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
+        "projectUniqueName": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
         "projectName": "MongoDb",
-        "projectPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
-        "packagesPath": "/home/relier/.nuget/packages/",
-        "outputPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/obj/",
+        "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj",
+        "packagesPath": "/home/sebastiaowillian/.nuget/packages/",
+        "outputPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/relier/.nuget/NuGet/NuGet.Config"
+          "/home/sebastiaowillian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -90,8 +84,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
-                "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj"
+              "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+                "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj"
               }
             }
           }
@@ -108,7 +102,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.12.1, )"
+              "version": "[2.14.1, )"
             }
           },
           "imports": [
@@ -126,24 +120,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/relier/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj": {
+    "/home/sebastiaowillian/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/relier/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj",
+        "projectUniqueName": "/home/sebastiaowillian/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj",
         "projectName": "DomainTests",
-        "projectPath": "/home/relier/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj",
-        "packagesPath": "/home/relier/.nuget/packages/",
-        "outputPath": "/home/relier/projetos/agencia-bancaria/test/DomainTests/obj/",
+        "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/test/DomainTests/DomainTests.csproj",
+        "packagesPath": "/home/sebastiaowillian/.nuget/packages/",
+        "outputPath": "/home/sebastiaowillian/projetos/agencia-bancaria/test/DomainTests/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/relier/.nuget/NuGet/NuGet.Config"
+          "/home/sebastiaowillian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -155,11 +146,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
-                "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj"
+              "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+                "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj"
               },
-              "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
-                "projectPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj"
+              "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
+                "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj"
               }
             }
           }
@@ -212,7 +203,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
         }
       }
     }

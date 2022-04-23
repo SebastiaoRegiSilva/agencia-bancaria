@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "71ld7PwrIteZZrJP9/lGnt0iNSStsWTZC6LMtKo8yrK3mf1bYxlVordQ3fQzidfqApioA4xlTnKxEmlOAdPXGQ==",
+  "dgSpecHash": "qQeYMKQzazo96GwiDebX6swxB3mozcKQvpBmgGnuM6bBype8VgLp++kZmL10CpK9B7wFjbABJFiAv2K2+LPzXw==",
   "success": true,
-  "projectFilePath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/Local/Local.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/Local/Local.csproj",
+  "expectedPackageFiles": [
+    "/home/sebastiaowillian/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/5.0.0/microsoft.aspnetcore.mvc.razor.extensions.5.0.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.aspnetcore.mvc.razor.runtimecompilation/5.0.0/microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.aspnetcore.razor.language/5.0.0/microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.codeanalysis.analyzers/3.0.0/microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.codeanalysis.common/3.7.0/microsoft.codeanalysis.common.3.7.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.codeanalysis.csharp/3.7.0/microsoft.codeanalysis.csharp.3.7.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.codeanalysis.razor/5.0.0/microsoft.codeanalysis.razor.5.0.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.extensions.dependencymodel/5.0.0/microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/system.collections.immutable/1.5.0/system.collections.immutable.1.5.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.0/system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "/home/sebastiaowillian/.nuget/packages/system.threading.tasks.extensions/4.5.3/system.threading.tasks.extensions.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj": {}
+    "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj": {}
   },
   "projects": {
-    "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+    "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+        "projectUniqueName": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj",
         "projectName": "Agencia.Plataforma.Domain",
-        "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj",
-        "packagesPath": "/home/relier/.nuget/packages/",
-        "outputPath": "/home/relier/projetos/agencia-bancaria/src/Domain/obj/",
+        "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj",
+        "packagesPath": "/home/sebastiaowillian/.nuget/packages/",
+        "outputPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/relier/.nuget/NuGet/NuGet.Config"
+          "/home/sebastiaowillian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -61,24 +58,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj": {
+    "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj",
+        "projectUniqueName": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj",
         "projectName": "SqlServer",
-        "projectPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj",
-        "packagesPath": "/home/relier/.nuget/packages/",
-        "outputPath": "/home/relier/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/obj/",
+        "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/SqlServer.csproj",
+        "packagesPath": "/home/sebastiaowillian/.nuget/packages/",
+        "outputPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/SqlServer/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/relier/.nuget/NuGet/NuGet.Config"
+          "/home/sebastiaowillian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -90,8 +84,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
-                "projectPath": "/home/relier/projetos/agencia-bancaria/src/Domain/Domain.csproj"
+              "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+                "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj"
               }
             }
           }
@@ -126,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -163,9 +163,11 @@ namespace Agencia.Plataforma.Infrastructure.Repositories.MongoDb.Accounts
         {
             var saldo = RecuperarSaldoAsync(numeroConta).Result;
 
-            //if(saldo < valor);
-                // Implementar aqui que a operação é inválida.
-            //else
+            // Verificar se há saldo suficiente na conta.
+            var mensagem = "Saldo insuficente em conta";
+            if(saldo < valor)
+                mensagem.ToLower();
+            else
                 saldo-=valor;
 
             var filter = Builders<AccountModel>.Filter.Eq(a => a.NumeroConta, numeroConta);
