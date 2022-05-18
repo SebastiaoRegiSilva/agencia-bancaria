@@ -1,0 +1,4 @@
+var settings = MongoClientSettings.FromConnectionString("mongodb+srv://swillian2009:<password>@cluster0.kvyhh.mongodb.net/?retryWrites=true&w=majority");
+settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+var client = new MongoClient(settings);
+var database = client.GetDatabase("test");
