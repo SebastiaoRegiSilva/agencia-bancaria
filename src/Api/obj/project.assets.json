@@ -214,7 +214,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.OpenApi/1.2.3": {
+      "Microsoft.OpenApi/1.3.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
@@ -846,20 +846,17 @@
         "version.txt"
       ]
     },
-    "Microsoft.OpenApi/1.2.3": {
-      "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
+    "Microsoft.OpenApi/1.3.1": {
+      "sha512": "2X5CCFJCnx6v86fnpOg4TKlU1ba7MSf1yakeT7VI4846s7i6fOkERwStX94Rcq8wJsLyQYsUitd6vR38viePeA==",
       "type": "package",
-      "path": "microsoft.openapi/1.2.3",
+      "path": "microsoft.openapi/1.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net46/Microsoft.OpenApi.dll",
-        "lib/net46/Microsoft.OpenApi.pdb",
-        "lib/net46/Microsoft.OpenApi.xml",
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.2.3.nupkg.sha512",
+        "microsoft.openapi.1.3.1.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -1281,25 +1278,26 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Agencia.Plataforma.Domain >= 1.0.0",
+      "Microsoft.OpenApi >= 1.3.1",
       "MongoDB.Driver >= 2.14.1",
       "MongoDb >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "/home/sebastiaowillian/.nuget/packages/": {}
+    "/home/sebastiaosilva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Api/Api.csproj",
+      "projectUniqueName": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/Api.csproj",
       "projectName": "Api",
-      "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Api/Api.csproj",
-      "packagesPath": "/home/sebastiaowillian/.nuget/packages/",
-      "outputPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Api/obj/",
+      "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/Api.csproj",
+      "packagesPath": "/home/sebastiaosilva/.nuget/packages/",
+      "outputPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/sebastiaowillian/.nuget/NuGet/NuGet.Config"
+        "/home/sebastiaosilva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1311,11 +1309,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
-              "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Domain/Domain.csproj"
+            "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj": {
+              "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Domain/Domain.csproj"
             },
-            "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
-              "projectPath": "/home/sebastiaowillian/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj"
+            "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj": {
+              "projectPath": "/home/sebastiaosilva/projetos/agencia-bancaria/src/Infrastructure/Repositories/MongoDb/MongoDb.csproj"
             }
           }
         }
@@ -1330,6 +1328,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.OpenApi": {
+            "target": "Package",
+            "version": "[1.3.1, )"
+          },
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.14.1, )"
@@ -1357,7 +1359,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
       }
     }
   }
